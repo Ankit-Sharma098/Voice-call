@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Voice Call App</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="app">
+
+    <h1>🎧 Voice Call App</h1>
+    <p class="subtitle">Connect using a room code</p>
+
+    <div class="card">
+      <input id="room" placeholder="Enter Room Code" />
+
+      <div class="buttons">
+        <button id="join" class="btn primary">Join</button>
+        <button id="call" class="btn success">Start Call</button>
+        <button id="end" class="btn danger">End Call</button>
+      </div>
+
+      <p id="status">Status: Not connected</p>
+    </div>
+
+    <audio id="remoteAudio" autoplay></audio>
+
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
